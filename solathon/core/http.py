@@ -56,9 +56,7 @@ class HTTPClient:
 
 class AsyncHTTPClient:
     """Asynchronous HTTP Client to interact with Solana JSON RPC"""
-
     def __init__(self, endpoint: str):
-        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
         self.endpoint = endpoint
         version = sys.version_info
         self.headers = {
